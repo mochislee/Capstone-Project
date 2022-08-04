@@ -22,6 +22,8 @@ public class UserMovement : MonoBehaviour
     //REFERENCES
     private CharacterController controller;
     private Animator anim;
+    private bool isJumping;
+    private bool isLanding;
 
     // Start is called before the first frame update
     private void Start()
@@ -50,6 +52,8 @@ public class UserMovement : MonoBehaviour
 
         if(isGrounded)
         {
+            anim.SetBool("isJumping", false);
+            isJumping = false;
             // WALK
             if(moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
@@ -70,12 +74,12 @@ public class UserMovement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
+                anim.SetBool("isJumping", true);
+                isJumping = true;
             }
         }
-        
 
         controller.Move(moveDirection * Time.deltaTime);
-
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }

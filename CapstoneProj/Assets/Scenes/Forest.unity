@@ -221,7 +221,7 @@ MonoBehaviour:
   walkSpeed: 4
   runSpeed: 7
   isGrounded: 0
-  grounndCheckDistance: 1.3
+  grounndCheckDistance: 1.2
   groundMask:
     serializedVersion: 2
     m_Bits: 64
