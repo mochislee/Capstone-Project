@@ -21,11 +21,13 @@ public class UserMovement : MonoBehaviour
 
     //REFERENCES
     private CharacterController controller;
+    private Animator anim;
 
     // Start is called before the first frame update
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class UserMovement : MonoBehaviour
 
         float moveZ = Input.GetAxis("Horizontal");
         moveDirection = new Vector3(0, 0, moveZ);
+        moveDirection = transform.TransformDirection(moveDirection);
 
         if(isGrounded)
         {
@@ -77,8 +80,8 @@ public class UserMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    private void Idle() {}
-    private void Walk() {moveSpeed = walkSpeed;}
-    private void Run()  {moveSpeed = runSpeed;}
-    private void Jump() {velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);}
+    private void Idle() { anim.SetFloat("Speed", 0); }
+    private void Walk() { moveSpeed = walkSpeed; anim.SetFloat("Speed", 0.5f); }
+    private void Run()  { moveSpeed = runSpeed; anim.SetFloat("Speed", 1);}
+    private void Jump() { velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity); }
 }
