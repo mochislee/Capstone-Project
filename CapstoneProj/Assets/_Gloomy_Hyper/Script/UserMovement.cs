@@ -74,8 +74,7 @@ public class UserMovement : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
-                anim.SetBool("isJumping", true);
-                isJumping = true;
+                
             }
         }
 
@@ -87,5 +86,9 @@ public class UserMovement : MonoBehaviour
     private void Idle() { anim.SetFloat("Speed", 0); }
     private void Walk() { moveSpeed = walkSpeed; anim.SetFloat("Speed", 0.5f); }
     private void Run()  { moveSpeed = runSpeed; anim.SetFloat("Speed", 1);}
-    private void Jump() { velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity); }
+    private void Jump() {
+        velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        anim.SetBool("isJumping", true);
+        isJumping = true;
+    }
 }
