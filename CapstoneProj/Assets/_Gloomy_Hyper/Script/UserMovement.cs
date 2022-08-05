@@ -10,6 +10,11 @@ public class UserMovement : MonoBehaviour
     [SerializeField] private float runSpeed;
 
     private Vector3 moveDirection;
+
+    private Vector3 rotateDirection;
+
+    private Vector3 targetAngles;
+
     private Vector3 velocity;
 
     [SerializeField] private bool isGrounded;
@@ -25,6 +30,11 @@ public class UserMovement : MonoBehaviour
     private bool isJumping;
     private bool isLanding;
 
+    
+     public float smooth = 1f;
+ 
+ private Quaternion targetRotation;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -36,7 +46,9 @@ public class UserMovement : MonoBehaviour
     private void Update()
     {
         Move();
+        
     }
+   
 
     private void Move()
     {
@@ -49,6 +61,11 @@ public class UserMovement : MonoBehaviour
         float moveZ = Input.GetAxis("Horizontal");
         moveDirection = new Vector3(0, 0, moveZ);
         moveDirection = transform.TransformDirection(moveDirection);
+//
+        float moveY = Input.GetAxis("Vertical");
+        rotateDirection = new Vector3(0, 0, moveY);
+
+        rotateDirection = transform.TransformDirection(rotateDirection);
 
         if(isGrounded)
         {
@@ -57,30 +74,48 @@ public class UserMovement : MonoBehaviour
             // WALK
             if(moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
+                
                 Walk();
             } 
             // RUN
             else if(moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
             {
                 Run();
+                
             }
             // IDLE
             else if(moveDirection == Vector3.zero){
                 Idle();
             }
+            if(rotateDirection != Vector3.zero && !Input.GetKey(KeyCode.W))
+            {
+                Rotate();
+                Walk();
+                
+            } 
+
 
             moveDirection *= moveSpeed;
 
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
-                
             }
+
+            
         }
 
         controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(rotateDirection * Time.deltaTime);
+        
+        
+        
+
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        
+        
     }
 
     private void Idle() { anim.SetFloat("Speed", 0); }
@@ -91,4 +126,10 @@ public class UserMovement : MonoBehaviour
         anim.SetBool("isJumping", true);
         isJumping = true;
     }
+    private void Rotate()
+    {
+        targetAngles = transform.eulerAngles + 80f * Vector3.up; 
+        transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngles, smooth * Time.deltaTime);
+    }
+   
 }
