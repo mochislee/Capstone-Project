@@ -33,7 +33,7 @@ public class UserMovement : MonoBehaviour
     
      public float smooth = 1f;
  
- private Quaternion targetRotation;
+    private Quaternion targetRotation;
 
     // Start is called before the first frame update
     private void Start()
@@ -89,7 +89,7 @@ public class UserMovement : MonoBehaviour
             }
             if(rotateDirection != Vector3.zero && !Input.GetKey(KeyCode.W))
             {
-                Rotate();
+            
                 Walk();
                 
             } 
@@ -106,12 +106,6 @@ public class UserMovement : MonoBehaviour
         }
 
         controller.Move(moveDirection * Time.deltaTime);
-        controller.Move(rotateDirection * Time.deltaTime);
-        
-        
-        
-
-
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
         
@@ -126,10 +120,12 @@ public class UserMovement : MonoBehaviour
         anim.SetBool("isJumping", true);
         isJumping = true;
     }
+
+    /*
     private void Rotate()
     {
         targetAngles = transform.eulerAngles + 80f * Vector3.up; 
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, targetAngles, smooth * Time.deltaTime);
     }
-   
+   */
 }
