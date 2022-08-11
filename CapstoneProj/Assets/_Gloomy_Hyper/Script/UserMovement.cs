@@ -60,13 +60,9 @@ public class UserMovement : MonoBehaviour
 
         float moveZ = Input.GetAxis("Horizontal");
         moveDirection = new Vector3(0, 0, moveZ);
-        moveDirection = transform.TransformDirection(moveDirection);
+        
 //
-        float moveY = Input.GetAxis("Vertical");
-        rotateDirection = new Vector3(0, 0, moveY);
-
-        rotateDirection = transform.TransformDirection(rotateDirection);
-
+       
         if(isGrounded)
         {
             anim.SetBool("isJumping", false);
@@ -74,7 +70,6 @@ public class UserMovement : MonoBehaviour
             // WALK
             if(moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
-                
                 Walk();
             } 
             // RUN
@@ -83,16 +78,13 @@ public class UserMovement : MonoBehaviour
                 Run();
                 
             }
+
             // IDLE
             else if(moveDirection == Vector3.zero){
                 Idle();
             }
-            if(rotateDirection != Vector3.zero && !Input.GetKey(KeyCode.W))
-            {
+
             
-                Walk();
-                
-            } 
 
 
             moveDirection *= moveSpeed;
