@@ -1624,7 +1624,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: bacdd1bb4bd754ee897f6f32bf16c1b1, type: 2}
+    - {fileID: 11400000, guid: 924379c6ae6a14a4fa39ddef8cc1d5f6, type: 2}
 --- !u!114 &960295168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,25 +1672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fef2cad0586104d8a08bcb3f0439e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  walkSpeed: 4
-  runSpeed: 7
-  moveDirection: {x: 0, y: 0, z: 0}
-  rotateDirection: {x: 0, y: 0, z: 0}
-  targetAngles: {x: 0, y: 0, z: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  isGrounded: 0
-  grounndCheckDistance: 1.2
-  groundMask:
-    m_Bits: 64
-  gravity: -9.81
-  jumpHeight: 3
-  controller: {fileID: 0}
-  anim: {fileID: 0}
-  isJumping: 0
-  isLanding: 0
-  smooth: 1
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &960295171
 MonoBehaviour:
   m_ObjectHideFlags: 0
