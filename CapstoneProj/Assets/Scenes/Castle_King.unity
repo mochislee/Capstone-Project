@@ -1885,6 +1885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 1833500994312510, guid: 2eff602364ad04f4d9d4e3d7f633f99e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4487654485736060, guid: 2eff602364ad04f4d9d4e3d7f633f99e, type: 3}
       propertyPath: m_RootOrder
       value: 5
