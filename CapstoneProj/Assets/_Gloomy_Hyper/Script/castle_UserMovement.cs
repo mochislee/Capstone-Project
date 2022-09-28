@@ -59,7 +59,8 @@ public class castle_UserMovement : MonoBehaviour
         }        
 
         float moveZ = Input.GetAxis("Horizontal");
-        moveDirection = new Vector3(moveZ, 0, 0);
+        float moveX = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(moveX, 0, moveZ);
         
 //
        

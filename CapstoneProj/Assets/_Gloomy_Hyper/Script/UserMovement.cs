@@ -59,7 +59,8 @@ public class UserMovement : MonoBehaviour
         }        
 
         float moveZ = Input.GetAxis("Horizontal");
-        moveDirection = new Vector3(0, 0, moveZ);
+        float moveX = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(moveX, 0, moveZ);
         
 //
        
