@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286ae3cef981ab7419e117a20d766a22, type: 3}
+  m_Name: Pg_20_21
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: DonJuan_115
+    text: Ama ko'y iyong tulutang ang bunso mo'y magpaalam, ako ang hahanap naman
+      ng iyo pong kagamutan.
+    children: []
+  - uniqueID: DonJuan_116
+    text: Ngayon po'y tatlong taon na hindi nagbabalik sila, labis ko pong alaalang
+      ang sakit mo'y lumubha pa.
+    children: []
+  - uniqueID: Hari_117
+    text: Bunsong anak kong Don Juan, kung ikaw pa'y mawawalay ay lalo kong kamatayan
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
+  - uniqueID: 
+    text: 
+    children: []
