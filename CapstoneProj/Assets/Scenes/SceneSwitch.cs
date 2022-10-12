@@ -14,6 +14,6 @@ public class SceneSwitch : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

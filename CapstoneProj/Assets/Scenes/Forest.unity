@@ -1344,11 +1344,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-<<<<<<< Updated upstream
   m_FocalLength: 13.095703
-=======
-  m_FocalLength: 22.101252
->>>>>>> Stashed changes
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1357,11 +1353,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-<<<<<<< Updated upstream
   field of view: 85
-=======
-  field of view: 57
->>>>>>> Stashed changes
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1386,23 +1378,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-<<<<<<< Updated upstream
   m_LocalRotation: {x: 0, y: 0.7002865, z: 0, w: 0.7138619}
   m_LocalPosition: {x: -30.999996, y: 0.57999986, z: 23.028534}
-=======
-  m_LocalRotation: {x: -0.03102429, y: 0.7288146, z: 0.033095334, w: 0.6832068}
-  m_LocalPosition: {x: -22.14, y: 2.26, z: 25.1}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 971052723}
   m_RootOrder: 0
-<<<<<<< Updated upstream
   m_LocalEulerAnglesHint: {x: 0, y: 88.9, z: 0}
-=======
-  m_LocalEulerAnglesHint: {x: -5.2, y: 93.7, z: 0}
->>>>>>> Stashed changes
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class IntroScript : MonoBehaviour
 {
-    public void LoadScene()
+    void onEnable()
     {
-       SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 }
