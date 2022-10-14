@@ -12,10 +12,25 @@ namespace First.Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+
+        [NonSerialized]
         GUIStyle nodeStyle;
-        bool dragging = false;
+
+        [NonSerialized]
         DialogueNode draggingNode = null;
+
+        [NonSerialized]
         Vector2 draggingOffset;
+
+        [NonSerialized]
+        DialogueNode creatingNode = null;
+
+        [NonSerialized]
+        DialogueNode deletingNode = null;
+
+        [NonSerialized]
+        DialogueNode linkingParentNode = null;
+
 
 
         // Para magkaroon ng option sa Window
@@ -70,6 +85,18 @@ namespace First.Dialogue.Editor
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes()) {
                     DrawNode(node);
                 }
+
+                if (creatingNode != null) {
+                    Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
+                    selectedDialogue.CreateNode(creatingNode);
+                    creatingNode = null;
+                }
+
+                if (deletingNode != null) {
+                    Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
+                }
             }
         }
         // PROCESS EVENTS
@@ -91,11 +118,11 @@ namespace First.Dialogue.Editor
             }
         }
 
+        // DRAW NODE
         private void DrawNode(DialogueNode node) {
             GUILayout.BeginArea(node.rect, nodeStyle);
             EditorGUI.BeginChangeCheck();
 
-            EditorGUILayout.LabelField("Node:", EditorStyles.whiteLabel);
             string newText = EditorGUILayout.TextField(node.text);
             string newUniqueID = EditorGUILayout.TextField(node.uniqueID);
 
@@ -103,11 +130,51 @@ namespace First.Dialogue.Editor
                 Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
 
                 node.text = newText;
-                node.uniqueID = newUniqueID;
             }
+            // BUTTON POSITION LAYOUT
+            GUILayout.BeginHorizontal();
+            
+            if (GUILayout.Button("+")) {    // Add button
+                creatingNode = node;
+            }
+
+            DrawLinkButtons(node);          // Link or Unlink button
+
+            if(GUILayout.Button("-")){      // Delete button
+                deletingNode = node;
+            }
+            GUILayout.EndHorizontal();
             GUILayout.EndArea();
         }
-
+        // DRAW LINK BUTTONS
+        private void DrawLinkButtons(DialogueNode node) {
+            if (linkingParentNode == null) {
+                if (GUILayout.Button("link")) {
+                    linkingParentNode = node;
+                }
+            }
+            else if (linkingParentNode == node) {
+                if (GUILayout.Button("cancel")) {
+                    linkingParentNode = null;
+                }
+            }
+            else if (linkingParentNode.children.Contains(node.uniqueID)) {
+                if (GUILayout.Button("unlink"))
+                {
+                    Undo.RecordObject(selectedDialogue, "Remove Dialogue Link");
+                    linkingParentNode.children.Remove(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+            else {
+                if (GUILayout.Button("child")) {
+                    Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
+                    linkingParentNode.children.Add(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+        }
+        // DRAW CONNECTIONS
         private void DrawConnections(DialogueNode node){
             Vector3 startPosition = new Vector2(node.rect.xMax, node.rect.center.y);
             foreach(DialogueNode childNode in selectedDialogue.GetAllChildren(node)){
