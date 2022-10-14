@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 
 namespace First.Dialogue
 {
     // Para magkaroon ng option sa Project na tab
-    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogues", order = 0)]
-    public class Dialogue : ScriptableObject
+    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue", order = 0)]
+    public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField]
         List<DialogueNode> nodes = new List<DialogueNode>();
@@ -17,61 +18,102 @@ namespace First.Dialogue
 
         private void OnValidate() {
             nodeLookup.Clear();
-            foreach (DialogueNode node in GetAllNodes()) {
-                nodeLookup[node.uniqueID] = node;
-            }
-        }
-
-        private void Awake() {
-            if (nodes.Count == 0)
+            foreach (DialogueNode node in GetAllNodes())
             {
-                DialogueNode rootNode = new DialogueNode();
-                rootNode.uniqueID = Guid.NewGuid().ToString();
-                nodes.Add(rootNode);
+                nodeLookup[node.name] = node;
             }
         }
 
-        // Only included if running the editor
-#if UNITY_EDITOR
-        
-#endif
-        
-        public IEnumerable<DialogueNode> GetAllNodes() {
+        public IEnumerable<DialogueNode> GetAllNodes()
+        {
             return nodes;
         }
 
-        public DialogueNode GetRootNode(){
+        public DialogueNode GetRootNode()
+        {
             return nodes[0];
         }
 
-        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode) {
-            foreach (string childID in parentNode.children) {    
-                if( nodeLookup.ContainsKey(childID)){
+        public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
+        {
+            foreach (string childID in parentNode.GetChildren())
+            {
+                if (nodeLookup.ContainsKey(childID))
+                {
                     yield return nodeLookup[childID];
                 }
-                
-            }
-        }
-        // CREATE NODE
-        public void CreateNode(DialogueNode parent) {
-            DialogueNode newNode = new DialogueNode();
-            newNode.uniqueID = Guid.NewGuid().ToString();
-            parent.children.Add(newNode.uniqueID);
-            nodes.Add(newNode);
-            OnValidate();
-        }
-        // DELETE NODE
-        public void DeleteNode(DialogueNode nodeToDelete) {
-            nodes.Remove(nodeToDelete);
-            OnValidate();
-            CleanDanglingChildren(nodeToDelete);
-        }
-        // CLEAN DANGLING CHILDREN
-        private void CleanDanglingChildren(DialogueNode nodeToDelete) {
-            foreach (DialogueNode node in GetAllNodes()) {
-                node.children.Remove(nodeToDelete.uniqueID);
             }
         }
 
+#if UNITY_EDITOR
+        public void CreateNode(DialogueNode parent)
+        {
+            DialogueNode newNode = MakeNode(parent);
+            Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
+            Undo.RecordObject(this, "Added Dialogue Node");
+            AddNode(newNode);
+        }
+
+        public void DeleteNode(DialogueNode nodeToDelete)
+        {
+            Undo.RecordObject(this, "Deleted Dialogue Node");
+            nodes.Remove(nodeToDelete);
+            OnValidate();
+            CleanDanglingChildren(nodeToDelete);
+            Undo.DestroyObjectImmediate(nodeToDelete);
+        }
+
+        private static DialogueNode MakeNode(DialogueNode parent)
+        {
+            DialogueNode newNode = CreateInstance<DialogueNode>();
+            newNode.name = Guid.NewGuid().ToString();
+            if (parent != null)
+            {
+                parent.AddChild(newNode.name);
+            }
+
+            return newNode;
+        }
+
+        private void AddNode(DialogueNode newNode)
+        {
+            nodes.Add(newNode);
+            OnValidate();
+        }
+
+        private void CleanDanglingChildren(DialogueNode nodeToDelete)
+        {
+            foreach (DialogueNode node in GetAllNodes())
+            {
+                node.RemoveChild(nodeToDelete.name);
+            }
+        }
+#endif
+
+        public void OnBeforeSerialize()
+        {
+#if UNITY_EDITOR
+            if (nodes.Count == 0)
+            {
+                DialogueNode newNode = MakeNode(null);
+                AddNode(newNode);
+            }
+
+            if (AssetDatabase.GetAssetPath(this) != "")
+            {
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if (AssetDatabase.GetAssetPath(node) == "")
+                    {
+                        AssetDatabase.AddObjectToAsset(node, this);
+                    }
+                }
+            }
+#endif
+        }
+
+        public void OnAfterDeserialize()
+        {
+        }
     }
 }
