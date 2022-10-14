@@ -13,9 +13,48 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: Test1
-    text: Fish,, tama ba ginagawa ko?
-    children: []
-  - uniqueID: Test2
-    text: Gusto kong maglaroooo
-    children: []
+  - {fileID: 4447609711759747833}
+  - {fileID: 8590579390028157445}
+--- !u!114 &4447609711759747833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961dee1b7367b4c4e8558578a4f204f4, type: 3}
+  m_Name: d6b4fe84-f23a-4629-b684-6c0d593afdc2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children:
+  - 68afc584-7079-475f-8d78-213c5b0206ab
+  rect:
+    serializedVersion: 2
+    x: 23
+    y: 34
+    width: 200
+    height: 100
+--- !u!114 &8590579390028157445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961dee1b7367b4c4e8558578a4f204f4, type: 3}
+  m_Name: 68afc584-7079-475f-8d78-213c5b0206ab
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 232
+    y: 32
+    width: 200
+    height: 100
