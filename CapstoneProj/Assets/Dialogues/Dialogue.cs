@@ -36,7 +36,6 @@ namespace First.Dialogue
         
 #endif
         
-
         public IEnumerable<DialogueNode> GetAllNodes() {
             return nodes;
         }

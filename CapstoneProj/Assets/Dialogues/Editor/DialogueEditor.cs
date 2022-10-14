@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Diagnostics;
 using System.ComponentModel;
 using System;
 using System.Collections;
@@ -12,6 +11,7 @@ namespace First.Dialogue.Editor
     public class DialogueEditor : EditorWindow
     {
         Dialogue selectedDialogue = null;
+        Vector2 scrollPosition;
 
         [NonSerialized]
         GUIStyle nodeStyle;
@@ -31,6 +31,15 @@ namespace First.Dialogue.Editor
         [NonSerialized]
         DialogueNode linkingParentNode = null;
 
+        [NonSerialized]
+        bool draggingCanvas = false;
+
+        [NonSerialized]
+        Vector2 draggingCanvasOffset;
+
+
+        const float canvasSize = 4000;
+        const float backgroundSize = 50;
 
 
         // Para magkaroon ng option sa Window
@@ -79,12 +88,22 @@ namespace First.Dialogue.Editor
             }
             else {
                 ProcessEvents();
+
+                scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+                Rect canvas = GUILayoutUtility.GetRect(canvasSize, canvasSize);
+                Texture2D backgroundTex = Resources.Load("background") as Texture2D;
+                Rect texCoords = new Rect(0, 0, canvasSize / backgroundSize, canvasSize / backgroundSize);
+                GUI.DrawTextureWithTexCoords(canvas, backgroundTex, texCoords);
+
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes()) {
                     DrawConnections(node);
                 }
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes()) {
                     DrawNode(node);
                 }
+
+                EditorGUILayout.EndScrollView();
 
                 if (creatingNode != null) {
                     Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
@@ -103,9 +122,14 @@ namespace First.Dialogue.Editor
         private void ProcessEvents() {
             if (Event.current.type == EventType.MouseDown && draggingNode == null)
             {
-                draggingNode = GetNodeAtPoint(Event.current.mousePosition);
+                draggingNode = GetNodeAtPoint(Event.current.mousePosition + scrollPosition);
                 if (draggingNode != null) {
                     draggingOffset = draggingNode.rect.position - Event.current.mousePosition;
+                }
+                // Para ma-scroll pag mag na-navigate ng Dialogue Editor
+                else {
+                    draggingCanvas = true;
+                    draggingCanvasOffset = Event.current.mousePosition + scrollPosition;
                 }
             }
             else if (Event.current.type == EventType.MouseDrag && draggingNode != null) {
@@ -113,8 +137,15 @@ namespace First.Dialogue.Editor
                 draggingNode.rect.position = Event.current.mousePosition + draggingOffset;
                 GUI.changed = true;
             }
+            else if (Event.current.type == EventType.MouseDrag && draggingCanvas) {
+                scrollPosition = draggingCanvasOffset - Event.current.mousePosition;
+                GUI.changed = true;
+            }
             else if (Event.current.type == EventType.MouseUp && draggingNode != null) {
                 draggingNode = null;
+            }
+            else if (Event.current.type == EventType.MouseUp && draggingCanvas) {
+                draggingCanvas = false;
             }
         }
 
