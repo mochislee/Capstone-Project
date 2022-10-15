@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-public class SceneSwitch : MonoBehaviour
+public class Tutorial_SceneSwitch : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,6 @@ public class SceneSwitch : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }
