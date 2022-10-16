@@ -101,6 +101,8 @@ namespace First.Dialogue
 
             if (AssetDatabase.GetAssetPath(this) != "")
             {
+                Undo.RecordObject(this, "Added Dialogue Node");
+                
                 foreach (DialogueNode node in GetAllNodes())
                 {
                     if (AssetDatabase.GetAssetPath(node) == "")
@@ -109,6 +111,8 @@ namespace First.Dialogue
                     }
                 }
             }
+
+            
 #endif
         }
 
