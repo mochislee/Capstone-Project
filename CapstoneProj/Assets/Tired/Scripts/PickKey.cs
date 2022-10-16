@@ -7,7 +7,6 @@ public class PickKey : MonoBehaviour
     public Component doorcolliderhere;
     public GameObject keygone;
 
-    // Update is called once per frame
     void OnTriggerStay()
     {
         if (Input.GetKey(KeyCode.F))

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PickBread : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    
+    private void OnTriggerEnter(Collider other){
+        
+        PickBread_Display breaddisplay = other.GetComponent<PickBread_Display>();
+
+        if(breaddisplay != null){
+            breaddisplay.BreadCollected();
+            gameObject.SetActive(false);
+        }
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

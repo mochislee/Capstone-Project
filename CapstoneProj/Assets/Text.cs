@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class Text : MonoBehaviour
 {
-
-    public Animation hingehere;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +11,8 @@ public class OpenDoor : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerStay()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.F))
-            hingehere.Play();
         
     }
 }
