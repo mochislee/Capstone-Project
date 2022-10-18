@@ -118,10 +118,10 @@ Material:
     - _DissolveColor: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _HColor: {r: 1, g: 0.84778243, b: 0, a: 1}
+    - _HColor: {r: 1, g: 0.48534104, b: 0.07075471, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SColor: {r: 1, g: 0.4512769, b: 0, a: 1}
+    - _SColor: {r: 0.9811321, g: 0.638117, b: 0.35635456, a: 1}
     - _SpColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
