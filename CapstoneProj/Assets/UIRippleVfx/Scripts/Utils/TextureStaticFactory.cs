@@ -61,7 +61,7 @@ namespace VadimskyiLab.Utils
             {
                 tex = _circlePool.Dequeue();
                 if(tex.width != width || tex.height != height)
-                    tex.Resize(width, height);
+                    tex.Reinitialize(width, height);
             }
             else
             {
