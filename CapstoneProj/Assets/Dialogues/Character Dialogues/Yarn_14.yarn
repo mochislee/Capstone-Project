@@ -5,11 +5,11 @@ tags:
 //<< PlayMusic Mediko_line1 >>
 //<<playOneShot event:/Mediko_line1>>
 
-Matandang Mediko: Sakit mo po, Haring mahal ay bunga ng [color=ff0000]panagimpan[/color], mabigat man at maselan, may mabisang kagamutan. #line:0625638 
-Matandang Mediko: May isang ibong maganda ang pangalan ay [color=ff0000]Adarna[/color] pag nairining mong kumanta sa sakit ay giginhawa. #line:04261a8 
+Matandang Mediko: Sakit mo po, Haring mahal ay bunga ng<style="Emphasis"> panagimpan</style>, mabigat man at maselan, may mabisang kagamutan. #line:0625638 
+Matandang Mediko: May isang ibong maganda ang pangalan ay<style="Emphasis"> Adarna</style> pag nairining mong kumanta sa sakit ay giginhawa. #line:04261a8 
 Matandang Mediko: Kung araw ay wala roo't sa malayong mga buol, kasama ng ibang ibong nangagpapawi ng gutom. #line:025ac96 
 Matandang Mediko: Gabi nang katahimika't payapa sa kabundukan kung umuwi at humimlay sa kahoy na kanyang bahay. #line:04ee584 
-Matandang Mediko: Kaya mahal na Monarka [color=ff0000]iyon po ang ipakuha't gagaling na walang sala ang sakit mong dinadala[/color]. #line:077dd08 
+Matandang Mediko: Kaya mahal na Monarka<style="Emphasis"> iyon po ang ipakuha't gagaling na walang sala ang sakit mong dinadala</style>. #line:077dd08 
 
 << stop >>
 
