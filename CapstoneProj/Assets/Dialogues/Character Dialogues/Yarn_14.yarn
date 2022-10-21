@@ -6,11 +6,36 @@ tags:
 //<<playOneShot event:/Mediko_line1>>
 
 Matandang Mediko: Sakit mo po, Haring mahal ay bunga ng<style="Emphasis"> panagimpan</style>, mabigat man at maselan, may mabisang kagamutan. #line:0625638 
-Matandang Mediko: May isang ibong maganda ang pangalan ay<style="Emphasis"> Adarna</style> pag nairining mong kumanta sa sakit ay giginhawa. #line:04261a8 
+
+Matandang Mediko: May isang ibong maganda ang pangalan ay<style="Emphasis"> Adarna</style> pag nairining mong kumanta sa <style="Emphasis">sakit ay giginhawa</style>. #line:04261a8 
+
+Matandang Mediko: Ibong ito'y tumatahan sa <style="Emphasis">Tabor na kabundukan</style>,kahoy na hinahapuna'y <style="Emphasis">Pieras Platas</style> na makinang.
+
 Matandang Mediko: Kung araw ay wala roo't sa malayong mga buol, kasama ng ibang ibong nangagpapawi ng gutom. #line:025ac96 
+
 Matandang Mediko: Gabi nang katahimika't payapa sa kabundukan kung umuwi at humimlay sa kahoy na kanyang bahay. #line:04ee584 
+
 Matandang Mediko: Kaya mahal na Monarka<style="Emphasis"> iyon po ang ipakuha't gagaling na walang sala ang sakit mong dinadala</style>. #line:077dd08 
 
-<< stop >>
+//<< jump Bread >>
+===
+
+title: Bread
+tags:
+---
+<<set $NumberOfBread = 0>>
+
+<<if $NumberOfBread == 5>>
+Don Juan: Ama ko'y iyong tulutang ang bunso mo'y magpaalam, ako ang hahanap naman ng iyo pong kagamutan. #line:0cf501a 
+Don Juan: Ngayon po'y <style="Emphasis">tatlong taon</style> na hindi nagbabalik sila, labis ko pong alaalang ang sakit mo'y lumubha pa #line:0aaa565 
+Hari: Bunsong anak ko ng Don Juan.kung ikay pa'y mawawalay ay lalo kong kamatayan. #line:0ddb991 
+Hari: Masaklap sa puso't dibdib iyang gayak mong pag-alis, hininga ko'y mapapatid pag nawala ka sa titig. #line:0f00d7e 
+Don Juan: O, ama kong minamahal, sa puso ko nama'y subyang malasin kang nararatay. #line:073899a 
+Don Juan: Kaya po, kung pipigilin itong hangad kong magaling di ko maging sala manding umalis na nang palihim #line:0928a06 
+Hari: ... #line:024fe30 
+<< wait 2.0 >>
+Don Juan: Bendisyon mo, aking ama babaunin kong sandata. #line:06ed50b 
+
+<< endif >>
 
 ===
