@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: body06
-  m_Shader: {fileID: 4800000, guid: 3381d7ccf8d756546ba7dd0f2f58095f, type: 3}
-  m_ValidKeywords:
-  - _USEOUTLINE_ON
+  m_Shader: {fileID: 4800000, guid: 1ccecd9b89b8a4f14bfb64f29ddfcc81, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - DISSOVLE_OFF
   - FADE
   - MASK_OFF
+  - _USEOUTLINE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -91,9 +91,9 @@ Material:
     - _FXPower: 2
     - _FXRange: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.114
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.25
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.0169
