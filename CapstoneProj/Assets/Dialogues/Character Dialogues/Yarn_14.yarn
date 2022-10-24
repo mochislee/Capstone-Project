@@ -1,5 +1,6 @@
 ﻿title: Start
-tags:
+tags: 
+position: 244.39165878295898,447.8713722229004
 ---
 << wait 2.0 >>
 //<< PlayMusic Mediko_line1 >>
@@ -9,7 +10,7 @@ Matandang Mediko: Sakit mo po, Haring mahal ay bunga ng<style="Emphasis"> panagi
 
 Matandang Mediko: May isang ibong maganda ang pangalan ay<style="Emphasis"> Adarna</style> pag nairining mong kumanta sa <style="Emphasis">sakit ay giginhawa</style>. #line:04261a8 
 
-Matandang Mediko: Ibong ito'y tumatahan sa <style="Emphasis">Tabor na kabundukan</style>,kahoy na hinahapuna'y <style="Emphasis">Pieras Platas</style> na makinang.
+Matandang Mediko: Ibong ito'y tumatahan sa <style="Emphasis">Tabor na kabundukan</style>,kahoy na hinahapuna'y <style="Emphasis">Pieras Platas</style> na makinang. #line:004b7a2 
 
 Matandang Mediko: Kung araw ay wala roo't sa malayong mga buol, kasama ng ibang ibong nangagpapawi ng gutom. #line:025ac96 
 
@@ -21,7 +22,8 @@ Matandang Mediko: Kaya mahal na Monarka<style="Emphasis"> iyon po ang ipakuha't 
 ===
 
 title: Bread
-tags:
+tags: 
+position: 508.87485790252686,446.00875091552734
 ---
 <<set $NumberOfBread = 0>>
 
@@ -37,5 +39,4 @@ Hari: ... #line:024fe30
 Don Juan: Bendisyon mo, aking ama babaunin kong sandata. #line:06ed50b 
 
 << endif >>
-
 ===
