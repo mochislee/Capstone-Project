@@ -6,7 +6,7 @@ using TMPro;
 public class BreadUI : MonoBehaviour
 {
     private TextMeshProUGUI breadText;
-    // Start is called before the first frame update
+    
     void Start()
     {
         breadText = GetComponent<TextMeshProUGUI>();

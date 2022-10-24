@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class PickBread_Display : MonoBehaviour
 {
 
-    public int NumberOfBread{get; private set;}
+    public int NumberOfBread { get; private set; }
 
     public UnityEvent<PickBread_Display> OnBreadCollected;
     
