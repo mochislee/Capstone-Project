@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PAGSUSULIT 1.unity
     guid: 527cbfdd1395cdc46a81238d74b8fa0f
   - enabled: 1
-    path: Assets/Scenes/Quizzes/Quiz1.unity
+    path: Assets/Scenes/Quizzes/Quiz 1.unity
     guid: 339e697c3ca0d174895c2170010ecd27
   - enabled: 1
     path: Assets/Scenes/Forest.unity

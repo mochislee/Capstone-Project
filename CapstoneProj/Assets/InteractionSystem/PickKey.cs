@@ -13,9 +13,9 @@ public class PickKey : MonoBehaviour, IInteractable
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
 
-    void OnTriggerStay(Collider key)
+    void OnTriggerStay()
     {
-        PickKey_Display pickKey = key.GetComponent<PickKey_Display>();
+        PickKey_Display pickKey = GetComponent<PickKey_Display>();
 
         if (pickKey != null)
         {
