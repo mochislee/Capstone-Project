@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 0e9f67ccf2d980144bccc4b99d48b31a
   - enabled: 1
-    path: Assets/Scenes/TutorialGame 1.unity
+    path: Assets/Scenes/TutorialGame 1/TutorialGame 1.unity
     guid: 1bf52e0779203465cae6cef679ae958c
   - enabled: 1
     path: Assets/Scenes/DonDiego Cutscene.unity
