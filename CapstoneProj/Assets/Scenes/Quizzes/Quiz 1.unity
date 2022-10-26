@@ -580,6 +580,13 @@ MonoBehaviour:
     - Nilimusa
     - Paglalagalag
     CorrectAnswer: 1
+  - Question: 'Lokasyon kung saan matatagpuan ang Piedras Platas. '
+    Answer:
+    - Piedras Platas
+    - Dampa
+    - Kastilyo
+    - Bundok ng Tabor
+    CorrectAnswer: 4
   - Question: 'Nilimusa o matinding kalungkutan '
     Answer:
     - Nalulumbay
@@ -595,13 +602,6 @@ MonoBehaviour:
     - Piedras Platas
     - Puno ng Macopa
     CorrectAnswer: 3
-  - Question: 'Lokasyon kung saan matatagpuan ang Piedras Platas. '
-    Answer:
-    - Piedras Platas
-    - Dampa
-    - Kastilyo
-    - Bundok ng Tabor
-    CorrectAnswer: 4
   options:
   - {fileID: 2094147849}
   - {fileID: 291774889}

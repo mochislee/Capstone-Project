@@ -43,13 +43,13 @@ public class QuizManager : MonoBehaviour
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
             ScoreTxt.text = score + "/" +  totalQuestions;
-
+//retry
             if(score <= 2){
                 buttonNext.SetActive(false);
                 Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
                 Button Rbtn = NextBtn.GetComponent<Button>();
 		        Rbtn.onClick.AddListener(Retry);
-
+//continue next scene
             }
             else{
                 buttonRetry.SetActive(false);
