@@ -15,10 +15,20 @@ public class QuizManager : MonoBehaviour
     public GameObject GoPanel;
 
     public UnityEngine.UI.Text QuestionTxt; 
-     public UnityEngine.UI.Text ScoreTxt; 
+    public UnityEngine.UI.Text ScoreTxt;
+    public UnityEngine.UI.Text Message;  
 
-     int totalQuestions=0; 
-     public int score; 
+    public Button RetryBtn;
+    public Button NextBtn;
+
+    public GameObject buttonRetry;
+    public GameObject buttonNext;
+
+
+  
+
+    int totalQuestions = 0; 
+    public int score; 
 
     private void Start()
     {       
@@ -27,37 +37,60 @@ public class QuizManager : MonoBehaviour
             generateQuestion();
     }
 
+
+//last panel / updates
      void GameOver()
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
             ScoreTxt.text = score + "/" +  totalQuestions;
 
+            if(score <= 2){
+                buttonNext.SetActive(false);
+                Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
+                Button Rbtn = NextBtn.GetComponent<Button>();
+		        Rbtn.onClick.AddListener(Retry);
+
+            }
+            else{
+                buttonRetry.SetActive(false);
+                Message.text = "Mahusay! Maari nang magpatuloy ";
+                Button Nbtn = NextBtn.GetComponent<Button>();
+		        Nbtn.onClick.AddListener(Next);
+            }
+
      }
 
-
+//method scene changer
      public void Next()
      {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
      }
+
+     public void Retry(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+
+
+//right wrong method
 
     public void correct()
     {
-        score +=1; 
-         QnA.RemoveAt(currentQuestion);
-         generateQuestion();
+        score += 1; 
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
     }
 
 
     public void wrong(){
-       QnA.RemoveAt(currentQuestion);
-         generateQuestion();
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
     }
 
+//Answers
     void SetAnswers(){
 
-        for (int i = 0; i <options.Length; i++) 
+        for (int i = 0; i < options.Length; i++) 
         {
-
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text= QnA[currentQuestion].Answer[i]; 
 
@@ -68,7 +101,7 @@ public class QuizManager : MonoBehaviour
     }
     }
 
-
+//generate randomized Questions
     void generateQuestion()
     {
         if (QnA.Count > 0){
@@ -84,7 +117,6 @@ public class QuizManager : MonoBehaviour
             GameOver();
         }
     
-
    
     }
 }

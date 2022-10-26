@@ -12,12 +12,12 @@ public class AnswerScript : MonoBehaviour
     {
         if(isCorrect)
         {
-            Debug.Log("Correct");
+            Debug.Log("Tama");
             quizManager.correct();
         }
         else
         {
-             Debug.Log("Wrong");
+             Debug.Log("Mali");
              quizManager.wrong();
         }
 
