@@ -79,7 +79,6 @@ public class QuizManager : MonoBehaviour
         generateQuestion();
     }
 
-
     public void wrong(){
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
@@ -93,7 +92,7 @@ public class QuizManager : MonoBehaviour
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = QnA[currentQuestion].Answer[i]; 
 
-            if(QnA[currentQuestion].CorrectAnswer == i+1)
+            if(QnA[currentQuestion].CorrectAnswer == i)
             {
                   options[i].GetComponent<AnswerScript>().isCorrect = true;
             }

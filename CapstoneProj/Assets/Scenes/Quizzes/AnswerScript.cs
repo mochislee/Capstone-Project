@@ -14,7 +14,6 @@ public class AnswerScript : MonoBehaviour
         {
             Debug.Log("Tama");
             quizManager.correct();
-
         }
         else
         {
