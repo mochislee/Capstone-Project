@@ -576,32 +576,32 @@ MonoBehaviour:
       ng gising.
     Answer:
     - Panagimpan
-    - Itinatangis
-    - Nilimusa
-    - Paglalagalag
+    - Panaginip
+    - Paglalaglag
+    - Parurunan
     CorrectAnswer: 1
   - Question: 'Lokasyon kung saan matatagpuan ang Piedras Platas. '
     Answer:
-    - Piedras Platas
+    - Bundok ng Tabor
     - Dampa
     - Kastilyo
-    - Bundok ng Tabor
-    CorrectAnswer: 4
+    - Platas
+    CorrectAnswer: 1
   - Question: 'Nilimusa o matinding kalungkutan '
     Answer:
-    - Nalulumbay
-    - Sadboi
-    - Galak
     - Poot
-    CorrectAnswer: 1
+    - Hibang
+    - Nalulumbay
+    - Galak
+    CorrectAnswer: 3
   - Question: Pangalan ng puno na dinadapuan ng Ibong Adarna. Ito ang pangunahing
       destinasyon ng mga bida
     Answer:
-    - Narra
     - Mahogany
-    - Piedras Platas
-    - Puno ng Macopa
-    CorrectAnswer: 3
+    - Piedras platas
+    - Macopa
+    - Narra
+    CorrectAnswer: 2
   options:
   - {fileID: 2094147849}
   - {fileID: 291774889}

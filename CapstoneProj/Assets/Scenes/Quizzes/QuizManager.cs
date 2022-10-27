@@ -25,7 +25,6 @@ public class QuizManager : MonoBehaviour
     public GameObject buttonNext;
 
 
-  
 
     int totalQuestions = 0; 
     public int score; 
@@ -92,7 +91,7 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < options.Length; i++) 
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text= QnA[currentQuestion].Answer[i]; 
+            options[i].transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = QnA[currentQuestion].Answer[i]; 
 
             if(QnA[currentQuestion].CorrectAnswer == i+1)
             {
