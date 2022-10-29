@@ -5098,7 +5098,7 @@ MonoBehaviour:
   dialogueViews:
   - {fileID: 1427075547}
   - {fileID: 489871776}
-  startNode: Yarn_18
+  startNode: Start
   startAutomatically: 1
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}
@@ -8551,12 +8551,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Bip001 L Hand'\n\tTransform 'Bip001 R Foot'\n\tTransform
-    'Bip001 R Finger0'\n\tTransform 'Bip001 R Finger02'\n\tTransform 'Bip001 R Toe0'\n\tTransform
-    'Bip001 Head'\n\tTransform 'Bip001 Spine1'\n\tTransform 'Bip001 L Finger02'\n\tTransform
-    'Bip001 L Finger11'\n\tTransform 'Bip001 L Clavicle'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
