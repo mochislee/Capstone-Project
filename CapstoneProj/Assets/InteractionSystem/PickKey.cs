@@ -2,27 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Debug = UnityEngine.Debug;
 
 public class PickKey : MonoBehaviour, IInteractable
 {
-    public Input keyCode;
-    public Component doorcolliderhere;
-    public GameObject keygone;
+    [SerializeField] public Component doorcolliderhere;
+    [SerializeField] public GameObject keygone;
 
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
 
     void OnTriggerStay()
     {
-        PickKey_Display pickKey = GetComponent<PickKey_Display>();
+            if (Input.GetKey(KeyCode.F))
+                doorcolliderhere.GetComponent<BoxCollider>().enabled = true;
 
-        if (pickKey != null)
-        {
-            pickKey.KeyCollected();
             if (Input.GetKey(KeyCode.F))
                 keygone.SetActive(false);
-        }   
     }
 
     public bool Interact(Interactor interactor)

@@ -14,8 +14,17 @@ public class PickBread : MonoBehaviour, IInteractable
 
     void OnTriggerStay()
     {
+        PickBread_Display breadDisplay = GetComponent<PickBread_Display>();
+
         if (Input.GetKey(KeyCode.F))
             breadsgone.SetActive(false);
+
+        if (breadDisplay != null)
+        {
+            
+                breadDisplay.BreadCollected();
+                
+        }
     }
 
     public bool Interact(Interactor interactor)

@@ -24,7 +24,11 @@ public class QuizManager : MonoBehaviour
     public GameObject buttonRetry;
     public GameObject buttonNext;
 
+    public GameObject FlashPanel;
+    public UnityEngine.UI.Text FlashText;
 
+    private float Timer;
+    private bool Answer;
 
     int totalQuestions = 0; 
     public int score; 
@@ -34,25 +38,43 @@ public class QuizManager : MonoBehaviour
             totalQuestions = QnA.Count; 
             GoPanel.SetActive(false);
             generateQuestion();
+            Answer = true;
+            Timer = 0;
+    }
+
+    private void Update()
+    {
+        Timer += Time.deltaTime;
+
+        if (Answer)
+        {
+            if (Timer >= 2)
+            {
+                FlashPanel.SetActive(false);               
+                Timer = 0;
+            }
+        }
     }
 
 
 //last panel / updates
-     void GameOver()
+    void GameOver()
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
             ScoreTxt.text = score + "/" +  totalQuestions;
+
 //retry
             if(score <= 2){
                 buttonNext.SetActive(false);
                 Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
                 Button Rbtn = NextBtn.GetComponent<Button>();
 		        Rbtn.onClick.AddListener(Retry);
-//continue next scene
             }
+
+//continue next scene
             else{
                 buttonRetry.SetActive(false);
-                Message.text = "Mahusay! Maari nang magpatuloy ";
+                Message.text = "Mahusay! Maaari ka nang magpatuloy.";
                 Button Nbtn = NextBtn.GetComponent<Button>();
 		        Nbtn.onClick.AddListener(Next);
             }
@@ -69,19 +91,26 @@ public class QuizManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
-
 //right wrong method
 
     public void correct()
     {
-        score += 1; 
-        QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+
+            FlashPanel.SetActive(true);
+            FlashText.text = "May Tama ka!";
+            score += 1;
+            Answer = true;
+            QnA.RemoveAt(currentQuestion);
+            generateQuestion();
     }
 
-    public void wrong(){
-        QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+    public void wrong()
+    {
+            FlashPanel.SetActive(true);
+            FlashText.text = "May Mali ka!";
+            Answer = true;
+            QnA.RemoveAt(currentQuestion);
+            generateQuestion();
     }
 
 //Answers
@@ -96,7 +125,7 @@ public class QuizManager : MonoBehaviour
             {
                   options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
-    }
+        }
     }
 
 //generate randomized Questions
@@ -111,10 +140,8 @@ public class QuizManager : MonoBehaviour
         }
 
         else {
-            Debug.Log("Out of Question");
+            Debug.Log("End of Quiz");
             GameOver();
         }
-    
-   
     }
 }
