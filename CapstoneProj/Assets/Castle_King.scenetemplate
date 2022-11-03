@@ -395,11 +395,13 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 2e5eada9b391da044bb5b55d8737b484, type: 3}
     instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: 77036fcee156e9b428343bde02dd348e, type: 3}
-    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 8bf179a14d694db4cacb3a54934ee81f, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: 1f9e43ca6df1caf49b63fa6dc442ce53, type: 2}
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: 9aa9c6bad359e974ab17b24d901b3f4f, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 77036fcee156e9b428343bde02dd348e, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 66d736022f7fd3245967e92b5b04fb70, type: 3}
     instantiationMode: 0
