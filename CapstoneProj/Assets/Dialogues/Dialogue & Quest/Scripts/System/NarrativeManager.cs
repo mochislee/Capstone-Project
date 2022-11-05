@@ -113,7 +113,7 @@ namespace DialogueQuests
                 }
             }
 
-            if (should_unpause && event_timer > 0.1f)
+            if (should_unpause /*&& event_timer > 0.1f*/)
             {
                 should_unpause = false;
                 is_paused = false;
