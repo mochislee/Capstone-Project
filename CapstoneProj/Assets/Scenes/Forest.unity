@@ -4203,7 +4203,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Ipagpatuloy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4116d67e97102c419e1bc79331198c5, type: 2}
   m_sharedMaterial: {fileID: -2296524409485341494, guid: c4116d67e97102c419e1bc79331198c5, type: 2}
