@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 62552903}
   - component: {fileID: 62552904}
   m_Layer: 0
-  m_Name: Txt (2)
+  m_Name: Line 97
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2957,7 +2957,7 @@ GameObject:
   - component: {fileID: 542093190}
   - component: {fileID: 542093191}
   m_Layer: 0
-  m_Name: Don Diego
+  m_Name: DonDiegoTalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5762,12 +5762,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d20c7ea75fc6ad4699a0a59cba2a31a, type: 3}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -6774,7 +6774,7 @@ GameObject:
   - component: {fileID: 1008992142}
   - component: {fileID: 1008992143}
   m_Layer: 0
-  m_Name: Txt (4)
+  m_Name: Line 102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8971,7 +8971,7 @@ GameObject:
   - component: {fileID: 1373588697}
   - component: {fileID: 1373588698}
   m_Layer: 0
-  m_Name: Txt (1)
+  m_Name: Line 96
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9908,7 +9908,7 @@ MonoBehaviour:
   value_audio: {fileID: 0}
   value_custom: {fileID: 0}
   value_int: 0
-  value_float: 1
+  value_float: 2
   value_string: 
   callfunc_evt:
     m_PersistentCalls:
@@ -11560,7 +11560,7 @@ GameObject:
   - component: {fileID: 1661816309}
   - component: {fileID: 1661816310}
   m_Layer: 0
-  m_Name: Txt (3)
+  m_Name: Line 98
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

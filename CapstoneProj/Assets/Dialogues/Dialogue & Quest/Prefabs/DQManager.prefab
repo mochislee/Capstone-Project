@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6778281011747158086}
   m_RootOrder: 2
@@ -43,14 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416790e2ceee3dc42be4e1fc137214ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui_canvas: {fileID: 1180542284980685529, guid: cfe499bb5caab3b489f054c2e0b5000f,
-    type: 3}
-  audio_manager: {fileID: 2770418778093811712, guid: 32ac2dfc5ee404b439eff18f99b32a48,
-    type: 3}
-  event_system: {fileID: 8938208887018125290, guid: fe57b1b4c8b310d43b13457a1c730872,
-    type: 3}
-  chat_bubble: {fileID: 7925868381424959790, guid: e19ce73902655b04eb5a0fdd531a084a,
-    type: 3}
+  ui_canvas: {fileID: 1180542284980685529, guid: cfe499bb5caab3b489f054c2e0b5000f, type: 3}
+  audio_manager: {fileID: 2770418778093811712, guid: 32ac2dfc5ee404b439eff18f99b32a48, type: 3}
+  event_system: {fileID: 8938208887018125290, guid: fe57b1b4c8b310d43b13457a1c730872, type: 3}
+  chat_bubble: {fileID: 7925868381424959790, guid: e19ce73902655b04eb5a0fdd531a084a, type: 3}
   actors_folder: Actors
   quests_folder: Quests
 --- !u!1 &3318213851605806335
@@ -80,6 +77,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6778281011747158086}
   m_RootOrder: 1
@@ -96,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e0be3d475ff1a4f86180f599709bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk_key: 32
+  talk_key: 102
   journal_key: 106
   cancel_key: 8
   mouse_controls: 1
@@ -129,6 +127,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6778281011747158086}
   m_RootOrder: 0
@@ -172,6 +171,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6778281010902495052}
   - {fileID: 6042241893026298667}
