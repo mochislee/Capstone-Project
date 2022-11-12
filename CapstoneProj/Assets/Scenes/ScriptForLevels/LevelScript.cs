@@ -9,11 +9,11 @@ public class LevelScript : MonoBehaviour
 
    public void Unlock(){
 
-       
+      //kukunin yung currentlevel
       int currentLevel = SceneManager.GetActiveScene().buildIndex;
-      
       int playerPrefsInt = PlayerPrefs.GetInt("levelUnlock");
 
+//mga index galing sa index nung mga quiz tas proceed sa scene (LevelManager loadlevel)
       if (currentLevel < 6)
          playerPrefsInt = 0;
       else if (currentLevel < 9)
@@ -26,6 +26,8 @@ public class LevelScript : MonoBehaviour
       // }
 
       PlayerPrefs.SetInt("levelUnlock", playerPrefsInt);
+
+      
       Debug.Log("next level unlock:" + playerPrefsInt + "Unlock") ;
       Debug.Log(currentLevel);
    }

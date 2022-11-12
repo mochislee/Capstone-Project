@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour
         }
         
     }
+    //unlock scene loader
     public void LoadLevel(int levelIndex){
         if(levelIndex == 0){
             SceneManager.LoadScene("Castle_King");
