@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FindKey
   m_EditorClassIdentifier: 
   quest_id: find_key
-  title: Hanapin ang susi
+  title: Hanapin ang susi ng silid-kainan.
   icon: {fileID: 21300000, guid: 3e0fdbe3e56fb7740aa669ca9b274cfc, type: 3}
-  desc: Hanaping ang susi upang mabuksan ang hapag kainan.
+  desc: Hanapin ang susi upang mabuksan ang silid-kainan.
   sort_order: 0

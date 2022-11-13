@@ -103,7 +103,7 @@ public class QuizManager2 : MonoBehaviour
     {
 
             FlashPanel.SetActive(true);
-            FlashText.text = "May Tama ka!";
+            FlashText.text = "Tama ka!";
             score += 1;
             Answer = true;
             QnA.RemoveAt(currentQuestion);
@@ -113,7 +113,7 @@ public class QuizManager2 : MonoBehaviour
     public void wrong()
     {
             FlashPanel.SetActive(true);
-            FlashText.text = "May Mali ka!";
+            FlashText.text = "Mali ka!";
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
