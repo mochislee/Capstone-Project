@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -422,13 +422,13 @@ MonoBehaviour:
     - Platas
     - Bundok ng Tabor
     CorrectAnswer: 3
-  - Question: 'Nilimusa o matinding kalungkutan '
+  - Question: Nahigang matagal dahil sa isang karamdaman
     Answer:
     - Nahihibang
-    - Poot
+    - Nangagpapawi
     - Nalulumbay
-    - Galak
-    CorrectAnswer: 2
+    - Naratay
+    CorrectAnswer: 3
   - Question: Pangalan ng puno na dinadapuan ng Ibong Adarna. Ito ang pangunahing
       destinasyon ng mga bida
     Answer:
