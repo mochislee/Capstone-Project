@@ -8,7 +8,4 @@ public class VocabularyScript : MonoBehaviour
     [SerializeField] private List<string> meanings = new List<string>();
 
     private Dictionary<string, string> Vocabs = new Dictionary<string, string>();
-
-    public bool modifyMeanings;
-
 }
