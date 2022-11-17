@@ -41,7 +41,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevels/level_PiedasPlatas.unity
     guid: c5a5aa47bac0a405ba06eb50d167c60d
-  - enabled: 1
-    path: Assets/Scenes/Castle_Dining.unity
-    guid: 7c7191e1d78574f488dcd6d029ddfa3d
   m_configObjects: {}
