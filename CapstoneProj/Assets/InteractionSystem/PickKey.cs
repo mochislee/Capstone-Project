@@ -11,13 +11,16 @@ public class PickKey : MonoBehaviour, IInteractable
     [SerializeField] private string prompt;
     public string InteractionPrompt => prompt;
 
+
     void OnTriggerStay()
     {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.K))
                 doorcolliderhere.GetComponent<BoxCollider>().enabled = true;
 
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.K))
                 keygone.SetActive(false);
+
+            
     }
 
     public bool Interact(Interactor interactor)
