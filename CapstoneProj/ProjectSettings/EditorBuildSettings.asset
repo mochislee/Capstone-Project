@@ -39,6 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ScriptSceneChange/SUBUKAN.unity
     guid: 587f4f50f6f454727ad30ba2fb5a185a
   - enabled: 1
-    path: Assets/Scenes/GameLevels/level_PiedasPlatas.unity
+    path: Assets/Scenes/level_PiedasPlatas.unity
     guid: c5a5aa47bac0a405ba06eb50d167c60d
   m_configObjects: {}

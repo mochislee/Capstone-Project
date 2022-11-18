@@ -5308,63 +5308,6 @@ RectTransform:
   m_AnchoredPosition: {x: -28.220863, y: -197.59189}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &399853233
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 399853234}
-  - component: {fileID: 399853235}
-  m_Layer: 0
-  m_Name: Quest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &399853234
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399853233}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 431787052}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &399853235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399853233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8263f36b72f674c9f1ef61dcf4cbac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 32
-  target_id: 
-  oper: 0
-  value_object: {fileID: 0}
-  value_data: {fileID: 11400000, guid: 1f9e43ca6df1caf49b63fa6dc442ce53, type: 2}
-  value_audio: {fileID: 0}
-  value_custom: {fileID: 0}
-  value_int: 0
-  value_float: 1
-  value_string: 
-  callfunc_evt:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &403932396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5835,61 +5778,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431763631}
   m_CullTransparentMesh: 1
---- !u!1 &431787051
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 431787052}
-  - component: {fileID: 431787053}
-  m_Layer: 0
-  m_Name: Complete_CollectBread_Quest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &431787052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431787051}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.262924, y: 107.14671, z: -214.34595}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 399853234}
-  m_Father: {fileID: 1496956275}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &431787053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431787051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2b7a1972166b924db4a047a1f9a9064, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event_id: 
-  trigger_type: 10
-  trigger_target: {fileID: 0}
-  trigger_actor: {fileID: 0}
-  trigger_value: 0
-  trigger_limit: 1
-  dialogue_type: 0
-  pause_gameplay: 0
-  skipable: 0
-  comment: nakolekta na lahat ng tinapay
 --- !u!4 &436867733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4582825214083532, guid: 86c5b6c8201d0b740b991f52bd43b6bd, type: 3}
@@ -21353,8 +21241,6 @@ Transform:
   m_Children:
   - {fileID: 251958164}
   - {fileID: 1914999849}
-  - {fileID: 1530877825}
-  - {fileID: 431787052}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22090,88 +21976,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529282607}
   m_CullTransparentMesh: 1
---- !u!1 &1530877824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1530877825}
-  - component: {fileID: 1530877827}
-  - component: {fileID: 1530877826}
-  m_Layer: 0
-  m_Name: StartCollectBread_Quest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1530877825
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530877824}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.262924, y: 107.14671, z: -214.34595}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1496956275}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1530877826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530877824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8263f36b72f674c9f1ef61dcf4cbac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 30
-  target_id: 
-  oper: 0
-  value_object: {fileID: 0}
-  value_data: {fileID: 11400000, guid: 1f9e43ca6df1caf49b63fa6dc442ce53, type: 2}
-  value_audio: {fileID: 0}
-  value_custom: {fileID: 0}
-  value_int: 0
-  value_float: 1
-  value_string: 
-  callfunc_evt:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1530877827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530877824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2b7a1972166b924db4a047a1f9a9064, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event_id: 
-  trigger_type: 10
-  trigger_target: {fileID: 0}
-  trigger_actor: {fileID: 0}
-  trigger_value: 0
-  trigger_limit: 0
-  dialogue_type: 0
-  pause_gameplay: 0
-  skipable: 0
-  comment: 'kolektahin ang mga tinapay
-
-'
 --- !u!1 &1534550327
 GameObject:
   m_ObjectHideFlags: 0
@@ -27378,7 +27182,7 @@ PrefabInstance:
     - target: {fileID: 1624471941697765078, guid: 97d95dbc19400734db0a7310b8a0dd31, type: 3}
       propertyPath: trigger_event
       value: 
-      objectReference: {fileID: 251958166}
+      objectReference: {fileID: 1914999850}
     - target: {fileID: 8262286037442802532, guid: 97d95dbc19400734db0a7310b8a0dd31, type: 3}
       propertyPath: m_RootOrder
       value: 2
