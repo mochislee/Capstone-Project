@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ea64a65dc7f514d84608bd9fa6b23b, type: 3}
   m_Name: Magical Ermitanyo
   m_EditorClassIdentifier: 
-  actor_id: Magical Ermitanyo
+  actor_id: MagicalErmitanyo
   is_player: 0
   title: Magical Ermitanyo
   portrait: {fileID: 0}
   animation: {fileID: 0}
-  show_bubble: 0
+  show_bubble: 1
   bubble_offset: {x: 0, y: 0, z: 0}
   bubble_size: 1
   load_dialogue: {fileID: 0}
