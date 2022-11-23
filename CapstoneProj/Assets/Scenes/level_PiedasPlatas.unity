@@ -381,8 +381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  walkSpeed: 6
-  runSpeed: 10
+  walkSpeed: 10
+  runSpeed: 20
   isGrounded: 0
   grounndCheckDistance: 0.5
   groundMask:
