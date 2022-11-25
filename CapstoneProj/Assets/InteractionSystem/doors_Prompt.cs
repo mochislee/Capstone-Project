@@ -7,13 +7,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = UnityEngine.Debug;
 
-public class doors_Prompt : MonoBehaviour, IInteractable
+public class doors_Prompt : MonoBehaviour, DoorKeyIInteractable
 {
     [SerializeField] private string prompt;
 
     public string InteractionPrompt => prompt;
 
-    public bool Interact(Interactor interactor)
+    public bool DoorKeyInteract(DoorKeyInteractor interactor)
     {
         
         var inventory = interactor.GetComponent<Inventory>();

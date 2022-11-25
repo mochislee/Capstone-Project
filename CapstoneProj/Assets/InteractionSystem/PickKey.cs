@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PickKey : MonoBehaviour, IInteractable
+public class PickKey : MonoBehaviour, DoorKeyIInteractable
 {
     [SerializeField] public Component doorcolliderhere;
     [SerializeField] public GameObject keygone;
@@ -14,16 +14,16 @@ public class PickKey : MonoBehaviour, IInteractable
 
     void OnTriggerStay()
     {
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKey(KeyCode.E))
                 doorcolliderhere.GetComponent<BoxCollider>().enabled = true;
 
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKey(KeyCode.E))
                 keygone.SetActive(false);
 
             
     }
 
-    public bool Interact(Interactor interactor)
+    public bool DoorKeyInteract(DoorKeyInteractor interactor)
     {
         var inventory = interactor.GetComponent<Inventory>();
 

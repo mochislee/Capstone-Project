@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour, IInteractable
+public class OpenDoor : MonoBehaviour, DoorKeyIInteractable
 {
     public Animation hingehere;
 
@@ -12,11 +12,11 @@ public class OpenDoor : MonoBehaviour, IInteractable
     
     void OnTriggerStay()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.E))
             hingehere.Play();
     }
     
-    public bool Interact(Interactor interactor)
+    public bool DoorKeyInteract(DoorKeyInteractor interactor)
     {
         var inventory = interactor.GetComponent<Inventory>();
 
