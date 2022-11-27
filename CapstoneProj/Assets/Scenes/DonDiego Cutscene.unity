@@ -5404,7 +5404,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694087641}
-  m_LocalRotation: {x: 0.027631108, y: -0.71944845, z: 0.013751199, w: 0.6938598}
+  m_LocalRotation: {x: 0.02763111, y: -0.71944845, z: 0.0137511995, w: 0.6938598}
   m_LocalPosition: {x: -71.40966, y: -38.1775, z: 4.204651}
   m_LocalScale: {x: 6.6234636, y: 7.3251905, z: 8.73314}
   m_ConstrainProportionsScale: 0
@@ -6563,7 +6563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.6
+      value: 6.69
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 44dd4fdbb6f10429a844c51183a4c84e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10091,7 +10091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238607974}
   m_LocalRotation: {x: -0.5000004, y: 0.4999997, z: 0.49999967, w: 0.50000036}
-  m_LocalPosition: {x: 0.0000012654863, y: 0.89380527, z: -0.030180726}
+  m_LocalPosition: {x: 0.0000012654863, y: 0.89380527, z: -0.030180732}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18176,12 +18176,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Bip001 L Hand'\n\tTransform 'Bip001 R Foot'\n\tTransform
-    'Bip001 R Finger0'\n\tTransform 'Bip001 R Finger02'\n\tTransform 'Bip001 R Toe0'\n\tTransform
-    'Bip001 Head'\n\tTransform 'Bip001 Spine1'\n\tTransform 'Bip001 L Finger02'\n\tTransform
-    'Bip001 L Finger11'\n\tTransform 'Bip001 L Clavicle'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
