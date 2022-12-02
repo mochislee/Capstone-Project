@@ -30,13 +30,13 @@ public class tutorialManager : MonoBehaviour
             }
         }    
         else if(popUpIndex == 2){
-            if(Input.GetKey(KeyCode.W)){
+            if(Input.GetKey(KeyCode.S)){
                 popUpIndex++;
                 wait -= Time.deltaTime;
             }
         }   
         else if(popUpIndex == 3){
-            if(Input.GetKey(KeyCode.S)){
+            if(Input.GetKey(KeyCode.W)){
                 popUpIndex++;
                 wait -= Time.deltaTime;
             }
