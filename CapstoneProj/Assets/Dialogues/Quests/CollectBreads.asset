@@ -15,5 +15,5 @@ MonoBehaviour:
   quest_id: five_bread
   title: Kolektahin ang limang tinapay.
   icon: {fileID: 21300000, guid: c0b351a4ee675b9459a4436b9d23edd7, type: 3}
-  desc: Kolektahin ang limang tinapay na nasa silid-kainan.
+  desc: Ang limang tinapay na kokoletahin ay ang baon ni Don Juan sa kanyang paglalakbay.
   sort_order: 0

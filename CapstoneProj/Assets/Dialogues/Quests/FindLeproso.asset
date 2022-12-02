@@ -15,5 +15,5 @@ MonoBehaviour:
   quest_id: finding_leproso
   title: Hanapin ang Leproso.
   icon: {fileID: 21300000, guid: b3ff70256d392414f92d2bb607ac08f4, type: 3}
-  desc: Hanapin ang leproso upang malaman kung ano ang mga dapat gawin.
+  desc: Siya ang magtuturo kay Don Juan kung nasaan ang Piedras Platas.
   sort_order: 0

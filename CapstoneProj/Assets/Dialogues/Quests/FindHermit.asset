@@ -15,6 +15,5 @@ MonoBehaviour:
   quest_id: finding_hermit
   title: Hanapin ang Ermitanyo.
   icon: {fileID: 21300000, guid: 539e5975870dcfe4da3c4696f2e1c0fa, type: 3}
-  desc: Hanapin ang Ermitanyo upang makuha ang mga kakailanganin sa pag huli sa Ibong
-    Adarna.
+  desc: Siya ang magtuturo kay Don Juan kung paano mahuhuli ang Ibong Adarna.
   sort_order: 0
