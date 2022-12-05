@@ -30208,7 +30208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 11400000, guid: 5ddfc40bd514aed47a72c8ecfa3c743b, type: 2}
-  text: "Sa pook na natatanaw\r ay may kahoy kang daratnan,\r rikitay di ano laman\r
+  text: "Sa pook na natatanaw\r ay may kahoy kang daratnan,\r rikit ay di ano laman\r
     <color=yellow>kawili-wiling</color>  titigan. \r"
   audio_clip: {fileID: 8300000, guid: c3025117d18bb22439bb271de0bde6fd, type: 3}
   anim: 

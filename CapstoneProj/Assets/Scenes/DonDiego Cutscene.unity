@@ -843,7 +843,7 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 6929769859ce23e47afcb0e7ff40bffd, type: 2}
   text: Sa kahoy na kaagapay mga ibon ay <color=yellow>dumuklay</color>, punong ito'y
     siya lamang tanging ayaw na dapuan!
-  audio_clip: {fileID: 0}
+  audio_clip: {fileID: 8300000, guid: a25090586175a564385a1dd59187753f, type: 3}
   anim: 
   duration: 4
   pause: 0
@@ -7880,7 +7880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: {fileID: 11400000, guid: 6929769859ce23e47afcb0e7ff40bffd, type: 2}
   text: Ikaw ngayo'y pasasaan at di sa akin naaang kamay.
-  audio_clip: {fileID: 0}
+  audio_clip: {fileID: 8300000, guid: 6f5e71450c7aa5643b30d1aa5ad5f725, type: 3}
   anim: 
   duration: 4
   pause: 0
@@ -11133,7 +11133,7 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 6929769859ce23e47afcb0e7ff40bffd, type: 2}
   text: Ganitong kagandang kahoy walang tumitirang ibon? Hiwagang di ko <color=yellow>manunoy</color>,
     sa aki'y <color=yellow>lumilinggatong</color>!
-  audio_clip: {fileID: 8300000, guid: 916c78a6087572749b1583dd0774f077, type: 3}
+  audio_clip: {fileID: 8300000, guid: effb264420f3a8e4a8befcb3e5480035, type: 3}
   anim: 
   duration: 4
   pause: 0
@@ -14135,7 +14135,7 @@ MonoBehaviour:
   actor: {fileID: 11400000, guid: 6929769859ce23e47afcb0e7ff40bffd, type: 2}
   text: Dapwa't anumang masapit ako dito'y di aalis, pipilitin kong mabatid ang himalang
     <color=yellow>nalilingid</color>.
-  audio_clip: {fileID: 0}
+  audio_clip: {fileID: 8300000, guid: 276977f0a49d41a4780f956e67bcc535, type: 3}
   anim: 
   duration: 4
   pause: 0
