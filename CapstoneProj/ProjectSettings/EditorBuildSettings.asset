@@ -47,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScriptSceneChange/AFTER_BATO.unity
     guid: c9bfea1ed34a7cc4c92d2daf26e04896
+  - enabled: 1
+    path: Assets/Scenes/IbongAdarnaLevel.unity
+    guid: 0ff025efac9d64611ac6dc8db0e7f776
+  - enabled: 1
+    path: Assets/Scenes/Pagsusulit/PAGSUSULIT 3.unity
+    guid: 28a82b8e420a5bb4996ff3304514e333
+  - enabled: 1
+    path: Assets/Scenes/Quizzes/Quiz 3.unity
+    guid: de395f766931c894b858b26f99870b0b
   m_configObjects: {}
