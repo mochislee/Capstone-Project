@@ -56,4 +56,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quizzes/Quiz 3.unity
     guid: de395f766931c894b858b26f99870b0b
+  - enabled: 1
+    path: Assets/Cutscene/Capture.unity
+    guid: e908ced25dff10345a7502746597e066
+  - enabled: 1
+    path: Assets/Scenes/Unstoned.unity
+    guid: 7b3586cf0b6deef44a25e94d83838345
+  - enabled: 1
+    path: Assets/Cutscene/PerfectScore.unity
+    guid: 58590d923687bd2439b973052c82eb81
   m_configObjects: {}
