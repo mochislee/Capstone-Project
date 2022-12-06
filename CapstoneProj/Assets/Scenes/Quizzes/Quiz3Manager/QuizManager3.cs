@@ -86,11 +86,11 @@ public class QuizManager3 : MonoBehaviour
 //method scene changer
      public void Next()
      {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+        SceneManager.LoadScene("PerfectScore");
      }
      
      public void Retry(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene("level_PiedasPlatas");
     }
 
    

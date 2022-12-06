@@ -8983,7 +8983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 1119590400}
-  _speed: 1
+  _speed: 3
 --- !u!65 &501462333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12949,7 +12949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 1090293688}
-  _speed: 1
+  _speed: 3
 --- !u!65 &698211448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30068,7 +30068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 627037273}
-  _speed: 1
+  _speed: 4
 --- !u!64 &1579100270
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32922,7 +32922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 594150206}
-  _speed: 1
+  _speed: 3
 --- !u!65 &1719372433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41053,7 +41053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waypointPath: {fileID: 1764643862}
-  _speed: 1
+  _speed: 4
 --- !u!65 &3602444995357376775
 BoxCollider:
   m_ObjectHideFlags: 0
