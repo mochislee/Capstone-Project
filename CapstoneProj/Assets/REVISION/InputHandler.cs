@@ -4,13 +4,11 @@ using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour {
     [SerializeField] public InputField nameInput;
+    private QuizManager q1;
+    private PlaytimeTimerScript playerTimer;
     [SerializeField] string filename;
-    [SerializeField] public GameObject panel;
-    [SerializeField] PointHUD pointHUD;
-    [SerializeField] PointCounter pointCounter;
-    [SerializeField] HighscoreHandler highscoreHandler;
-    [SerializeField] Text timer;
 
+    
 
     List<InputEntry> entries = new List<InputEntry> ();
 
@@ -19,11 +17,9 @@ public class InputHandler : MonoBehaviour {
     }
 
     public void AddNameToList () {
-        highscoreHandler.AddHighscoreIfPossible (new HighscoreElement (nameInput.text, pointHUD.Points, timer.text));
-    }
+       entries.Add(new InputEntry (nameInput.text));
+       nameInput.text = "";
 
-    public void ClosePanel()
-    {
-        panel.SetActive(false);
+       FileHandler.SaveToJSON<InputEntry> (entries, filename);
     }
 }

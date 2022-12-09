@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -377,6 +377,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281726075}
   m_CullTransparentMesh: 1
+--- !u!114 &342786541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8224115966656519811, guid: cd20a35ebb1cf054db5dbf00ea6c99ac, type: 3}
+  m_PrefabInstance: {fileID: 1040402817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856c59ffa31e1b3409a1bfbcf36c22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &357407681
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +581,53 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.60784316}
   m_EffectDistance: {x: 20, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!1 &389898334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389898335}
+  - component: {fileID: 389898336}
+  m_Layer: 0
+  m_Name: manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &389898335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389898334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 911, y: 728, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389898336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389898334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707099525340f41c0a77eb2099157298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  q1: {fileID: 357407682}
+  playerTimer: {fileID: 342786541}
+  filename: ' PlayersNames_and_Scores.json'
 --- !u!1 &448775080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1338,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 389898336}
+        m_TargetAssemblyTypeName: quizHandler, Assembly-CSharp
+        m_MethodName: AddToList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &796928451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,6 +1621,18 @@ MonoBehaviour:
       - m_Target: {fileID: 845476713}
         m_TargetAssemblyTypeName: LevelScript, Assembly-CSharp
         m_MethodName: Unlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 389898336}
+        m_TargetAssemblyTypeName: quizHandler, Assembly-CSharp
+        m_MethodName: AddToList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

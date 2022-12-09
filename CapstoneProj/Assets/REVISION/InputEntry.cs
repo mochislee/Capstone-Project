@@ -3,10 +3,14 @@ using System;
 [Serializable]
 public class InputEntry {
     public string playerName;
-    public int points;
+   
+  
 
-    public InputEntry (string name, int points) {
+  
+
+    public InputEntry (string name) {
         playerName = name;
-        this.points = points;
+     
+
     }
 }
