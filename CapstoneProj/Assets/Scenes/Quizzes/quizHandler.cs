@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class quizHandler : MonoBehaviour
 {
-   
+    public int q = 1;
     public QuizManager q1;
     public PlaytimeTimerScript playerTimer;
     [SerializeField] string filename;
@@ -17,10 +17,12 @@ public class quizHandler : MonoBehaviour
         quizEntries = FileHandler.ReadListFromJSON<quizData> (filename);
     }
 
+    
     public void AddToList () {
-       quizEntries.Add(new quizData (q1.score, playerTimer.playtime));
-       
+      
+       quizEntries.Add(new quizData (q, q1.score, playerTimer.playtime, q1.proficient));
 
+       
        FileHandler.SaveToJSON<quizData> (quizEntries, filename);
     }
 }

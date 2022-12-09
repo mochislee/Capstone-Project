@@ -33,6 +33,8 @@ public class QuizManager : MonoBehaviour
     int totalQuestions = 0; 
     public int score; 
 
+    public string proficient;
+  
     private void Start()
     {       
             totalQuestions = QnA.Count; 
@@ -65,14 +67,24 @@ public class QuizManager : MonoBehaviour
 
 //retry
             if(score <= 2){
+                proficient = "Beginner";
                 buttonNext.SetActive(false);
                 Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
                 Button Rbtn = NextBtn.GetComponent<Button>();
 		        Rbtn.onClick.AddListener(Retry);
             }
 
+            else if(score <= 4){
+                proficient = "Intermediate";
+                buttonRetry.SetActive(false);
+                Message.text = "Mahusay! Maaari ka nang magpatuloy.";
+                Button Nbtn = NextBtn.GetComponent<Button>();
+		        Nbtn.onClick.AddListener(Next);
+            }
+
 //continue next scene
             else{
+                proficient = "Advance";
                 buttonRetry.SetActive(false);
                 Message.text = "Mahusay! Maaari ka nang magpatuloy.";
                 Button Nbtn = NextBtn.GetComponent<Button>();
@@ -93,9 +105,22 @@ public class QuizManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
-   
-    
-    
+
+   public void displayProficiency(){
+        if(score < 2){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(score <= 4){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(score == 5){
+           proficient = "Advance";
+           Debug.Log("Advance");
+        }
+
+    }
      
 
 
