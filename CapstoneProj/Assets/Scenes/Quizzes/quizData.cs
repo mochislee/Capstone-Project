@@ -4,7 +4,7 @@ using System;
 public class quizData {
     public int playerScore;
     public int playerTime;
-    public string playerPoficiency;
+    public string playerProficiency;
     public int quizNo;
    
   
@@ -12,7 +12,7 @@ public class quizData {
         quizNo = no;
         playerScore = score;
         playerTime = timer;
-        playerPoficiency = prof;
+        playerProficiency = prof;
 
 
     }

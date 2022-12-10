@@ -3,9 +3,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour {
+
     [SerializeField] public InputField nameInput;
     [SerializeField] string filename;
-    
+
+
+
 
     List<InputEntry> entries = new List<InputEntry> ();
 
@@ -13,11 +16,13 @@ public class InputHandler : MonoBehaviour {
         entries = FileHandler.ReadListFromJSON<InputEntry> (filename);
     }
 
-    public void AddNameToList () {
-       entries.Add(new InputEntry (nameInput.text));
-       nameInput.text = "";
-       
+    public void AddNameToList()
+    {
+        entries.Add(new InputEntry(nameInput.text));
+        nameInput.text = "";
 
-       FileHandler.SaveToJSON<InputEntry> (entries, filename);
+
+        FileHandler.SaveToJSON<InputEntry>(entries, filename);
     }
+
 }
