@@ -554,7 +554,6 @@ MonoBehaviour:
   FlashText: {fileID: 1065587571}
   score: 0
   proficient: 
-  prof: {fileID: 287908757}
 --- !u!4 &357407683
 Transform:
   m_ObjectHideFlags: 0
@@ -707,9 +706,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707099525340f41c0a77eb2099157298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  q: 1
   q1: {fileID: 357407682}
   playerTimer: {fileID: 342786541}
-  filename: ' PlayerScores.json'
+  filename: PlayerQuiz.json
 --- !u!1 &448775080
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class quizHandler : MonoBehaviour
 {
+  
     public int q = 1;
     public QuizManager q1;
     public PlaytimeTimerScript playerTimer;
@@ -22,7 +25,9 @@ public class quizHandler : MonoBehaviour
       
        quizEntries.Add(new quizData (q, q1.score, playerTimer.playtime, q1.proficient));
 
-       
        FileHandler.SaveToJSON<quizData> (quizEntries, filename);
     }
+
+
+
 }

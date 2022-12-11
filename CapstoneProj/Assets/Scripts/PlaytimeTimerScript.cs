@@ -36,7 +36,8 @@ public class PlaytimeTimerScript : MonoBehaviour
 
             totalPlaytiime.totalPlayTime = playtime;
 
-            //Format("{00:00:00}", hours, minute,seconds);     // updates the total time
+            //Format("{00:00:00}", hours, minute,seconds); string.Format ("{0:0}", startTime);
+                 // updates the total time
         }
     }
 

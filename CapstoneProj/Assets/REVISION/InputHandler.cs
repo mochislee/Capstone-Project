@@ -7,12 +7,28 @@ using UnityEngine.UI;
 public class InputHandler : MonoBehaviour {
 
     [SerializeField] public InputField nameInput;
-  //  [SerializeField] string filename;
+  [SerializeField] string filename;
     public UnityEngine.UI.Text message;
 
     public TextAsset jsonName;
 
- 
+     List<InputEntry> entries = new List<InputEntry> ();
+
+    private void Start () {
+        entries = FileHandler.ReadListFromJSON<InputEntry> (filename);
+    }
+
+    public void AddNameToList () {
+        entries.Add (new InputEntry (nameInput.text));
+        nameInput.text = "";
+
+        FileHandler.SaveToJSON<InputEntry> (entries, filename);
+    }
+
+}
+/**
+
+    Player data = new Player();
 
  private void Start(){
     string data = File.ReadAllText(Application.dataPath +  "/Name.json");
@@ -20,7 +36,54 @@ public class InputHandler : MonoBehaviour {
 
     public void AddNameToList () {
 
-        Player data = new Player();
+        
+        string namePlayer = nameInput.text;
+        
+        data.playersData.Add(new PlayerData(namePlayer));
+
+        message.text = "Pangalan: " + namePlayer;
+    
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(Application.dataPath + "/Name.json", json);
+        Debug.Log(namePlayer);
+
+
+
+    }
+
+
+
+   [System.Serializable]
+    public class Player{
+          public List<PlayerData> playersData = new List<PlayerData>();
+
+    }
+ 
+   [System.Serializable]
+    public class PlayerData{
+        public string _playerName;
+
+        public PlayerData(){}
+        public PlayerData(string name){
+            _playerName = name;
+        }
+    }
+
+    
+}
+
+
+
+/**
+Player data = new Player();
+
+ private void Start(){
+    string data = File.ReadAllText(Application.dataPath +  "/Name.json");
+ }
+
+    public void AddNameToList () {
+
+        
         string namePlayer = nameInput.text;
         
         data.playersData.Add(new PlayerData(namePlayer));
@@ -28,7 +91,6 @@ public class InputHandler : MonoBehaviour {
         message.text = "Pangalan: " + namePlayer;
     
         string json = JsonUtility.ToJson(data);
-       
         File.WriteAllText(Application.dataPath + "/Name.json", json);
 
 
@@ -49,7 +111,6 @@ public class InputHandler : MonoBehaviour {
         
       
         
-       **/
 
     }
 
@@ -72,40 +133,8 @@ public class InputHandler : MonoBehaviour {
     
 
 
+**/
 
 
-    
-/*private void Start () {
-        entries = FileHandler.ReadListFromJSON<InputEntry> (filename);
-
-    }
-
-    public void AddNameToList()
-    {
-        string namePlayer = nameInput.text;
-        
-        if(nameInput.Equals(InputEntry.playerName)){
-            message.text = "Already Existed";
-        }
-        else{
-            entries.Add(new InputEntry(nameInput.text));
-            nameInput.text = "";
-            message.text = "Pangalan: " + namePlayer;
-            FileHandler.SaveToJSON<InputEntry>(entries, filename);
-        }
-
-    }
-
-     public static class JSONReaderName
-    {
-        public static InputEntry GetJsonName(TextAsset jsonName)
-        {
-            InputEntry nameData = JsonUtility.FromJson<InputEntry>(jsonName.text);
-            return nameData;
-        }
-    }**/
-    
-
-}
 
 
