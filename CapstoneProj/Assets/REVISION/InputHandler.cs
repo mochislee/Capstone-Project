@@ -12,15 +12,20 @@ public class InputHandler : MonoBehaviour {
 
     public TextAsset jsonName;
 
+    
+
      List<InputEntry> entries = new List<InputEntry> ();
 
+  
     private void Start () {
         entries = FileHandler.ReadListFromJSON<InputEntry> (filename);
     }
 
     public void AddNameToList () {
+        string namePlayer = nameInput.text;
         entries.Add (new InputEntry (nameInput.text));
         nameInput.text = "";
+        message.text = "Pangalan: " + namePlayer;
 
         FileHandler.SaveToJSON<InputEntry> (entries, filename);
     }
