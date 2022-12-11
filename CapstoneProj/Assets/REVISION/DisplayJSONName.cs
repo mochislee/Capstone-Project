@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DisplayJSONName : MonoBehaviour
 {
-
+    public InputEntry player;
     public TextAsset jsonNameData;
 
     void Start()
@@ -16,18 +16,14 @@ public class DisplayJSONName : MonoBehaviour
 
     public static class JSONReaderName
     {
-        public static PlayerName GetJsonName(TextAsset jsonNameData)
+        public static InputEntry GetJsonName(TextAsset jsonNameData)
         {
-            PlayerName nameData = JsonUtility.FromJson<PlayerName>(jsonNameData.text);
+            InputEntry nameData = JsonUtility.FromJson<InputEntry>(jsonNameData.text);
             return nameData;
         }
     }
 
-    [System.Serializable]
-    public class PlayerName
-    {
-        public string playerName;
-    }
+    
 }
 
 
