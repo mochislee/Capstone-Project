@@ -43,6 +43,7 @@ public class sampleDisplay : MonoBehaviour
         jsonQuiz = jsonFileQuiz.text;
         //var jsonData = JsonConvert.DeserializeObject<dynamic>(mJson);
         
+    
 
         //nameTxt.text = JSONReader.GetJSON(jsonFile).playerName;
         nameTxt.text = mJson;
