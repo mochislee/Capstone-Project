@@ -16,9 +16,15 @@ public class InputHandler : MonoBehaviour {
 
      List<InputEntry> entries = new List<InputEntry> ();
 
-  
+    public delegate void OnHighscoreListChanged (List<InputEntry> list);
+    public static event OnHighscoreListChanged onHighscoreListChanged;
+
     public void Start () {
         entries = FileHandler.ReadListFromJSON<InputEntry> (filename);
+
+         if (onHighscoreListChanged != null) {
+            onHighscoreListChanged.Invoke (entries);
+        }
     }
 
     public void AddNameToList () {
@@ -28,6 +34,9 @@ public class InputHandler : MonoBehaviour {
         message.text = "Pangalan: " + namePlayer;
 
         FileHandler.SaveToJSON<InputEntry> (entries, filename);
+        if (onHighscoreListChanged != null) {
+            onHighscoreListChanged.Invoke (entries);
+        }
     }
 
 }
