@@ -31,9 +31,15 @@ public class QuizManager : MonoBehaviour
     private bool Answer;
 
     int totalQuestions = 0; 
-    public int score; 
+    [SerializeField] public int points; 
+     
 
-    public string proficient;
+
+    [SerializeField] public string proficient;
+
+    InputHandler1 ihandler;
+  
+
   
     private void Start()
     {       
@@ -42,6 +48,10 @@ public class QuizManager : MonoBehaviour
             generateQuestion();
             Answer = true;
             Timer = 0;
+            ihandler = GameObject.Find("Proficiency Manager").GetComponent<InputHandler1>();
+
+
+
     }
 
     private void Update()
@@ -56,6 +66,8 @@ public class QuizManager : MonoBehaviour
                 Timer = 0;
             }
         }
+
+
     }
 
 
@@ -63,10 +75,15 @@ public class QuizManager : MonoBehaviour
     void GameOver()
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
-            ScoreTxt.text = score + "/" +  totalQuestions;
+            ScoreTxt.text = points + "/" +  totalQuestions;
+            displayProficiency();
+            ihandler.AddNameToList();
+            
+            
+
 
 //retry
-            if(score <= 2){
+            if(points <= 2){
                 proficient = "Beginner";
                 buttonNext.SetActive(false);
                 Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
@@ -74,7 +91,7 @@ public class QuizManager : MonoBehaviour
 		        Rbtn.onClick.AddListener(Retry);
             }
 
-            else if(score <= 4){
+            else if(points <= 4){
                 proficient = "Intermediate";
                 buttonRetry.SetActive(false);
                 Message.text = "Mahusay! Maaari ka nang magpatuloy.";
@@ -95,6 +112,7 @@ public class QuizManager : MonoBehaviour
 
      }
 
+
 //method scene changer
      public void Next()
      {
@@ -107,15 +125,23 @@ public class QuizManager : MonoBehaviour
 
 
    public void displayProficiency(){
-        if(score < 2){
+        if(points == 1){
             proficient = "Beginner";
             Debug.Log("Beginner");
         }
-        if(score <= 4){
+        if(points == 2){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(points == 3){
             proficient = "Intemediate";
             Debug.Log("Intermediate");
         }
-        if(score == 5){
+        if(points == 4){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(points == 5){
            proficient = "Advance";
            Debug.Log("Advance");
         }
@@ -131,10 +157,13 @@ public class QuizManager : MonoBehaviour
 
             FlashPanel.SetActive(true);
             FlashText.text = "Tama ka!";
-            score += 1;
+            points += 1;
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
+            
+
     }
 
     public void wrong()
@@ -144,6 +173,7 @@ public class QuizManager : MonoBehaviour
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
     }
 
 //Answers

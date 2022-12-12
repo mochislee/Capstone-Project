@@ -31,7 +31,9 @@ public class QuizManager2 : MonoBehaviour
     private bool Answer;
 
     int totalQuestions = 0; 
-    public int score; 
+    [SerializeField] public int points; 
+    [SerializeField] public string proficient;
+    InputHandler ihandler;
 
     private void Start()
     {       
@@ -40,6 +42,7 @@ public class QuizManager2 : MonoBehaviour
             generateQuestion();
             Answer = true;
             Timer = 0;
+            ihandler = GameObject.Find("Proficiency Manager").GetComponent<InputHandler>();
     }
 
     private void Update()
@@ -61,10 +64,12 @@ public class QuizManager2 : MonoBehaviour
     void GameOver()
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
-            ScoreTxt.text = score + "/" +  totalQuestions;
+            ScoreTxt.text = points + "/" +  totalQuestions;
+            displayProficiency();
+            ihandler.AddNameToList();
 
 //retry
-            if(score <= 2){
+            if(points <= 2){
                 buttonNext.SetActive(false);
                 Message.text = "Subukan Muli: Basahin mabuti ang mga salita. Ang mga kasagutan ay manggaling sa mga Naka-highlight.";
                 Button Rbtn = NextBtn.GetComponent<Button>();
@@ -93,6 +98,29 @@ public class QuizManager2 : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
+    public void displayProficiency(){
+        if(points == 1){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(points == 2){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(points == 3){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(points == 4){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(points == 5){
+           proficient = "Advance";
+           Debug.Log("Advance");
+        }
+
+    }
     
      
 
@@ -104,10 +132,11 @@ public class QuizManager2 : MonoBehaviour
 
             FlashPanel.SetActive(true);
             FlashText.text = "Tama ka!";
-            score += 1;
+            points += 1;
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
     }
 
     public void wrong()
@@ -117,6 +146,7 @@ public class QuizManager2 : MonoBehaviour
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
     }
 
 //Answers

@@ -46,7 +46,7 @@ public class HighscoreUI : MonoBehaviour {
                 var texts = uiElements[i].GetComponentsInChildren<Text> ();
                 texts[0].text = el.playerName;
                 texts[1].text = el.points.ToString ();
-                texts[2].text = el.timer;
+                texts[2].text = el.playerGrade;
             }
         }
     }

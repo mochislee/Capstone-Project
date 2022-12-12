@@ -31,7 +31,9 @@ public class QuizManager3 : MonoBehaviour
     private bool Answer;
 
     int totalQuestions = 0; 
-    public int score; 
+    [SerializeField] public int points; 
+    [SerializeField] public string proficient;
+    InputHandler2 ihandler;
 
     private void Start()
     {       
@@ -40,6 +42,7 @@ public class QuizManager3 : MonoBehaviour
             generateQuestion();
             Answer = true;
             Timer = 0;
+            ihandler = GameObject.Find("Proficiency Manager").GetComponent<InputHandler2>();
     }
 
     private void Update()
@@ -61,10 +64,12 @@ public class QuizManager3 : MonoBehaviour
     void GameOver()
      {      QuizPanel.SetActive(false);
             GoPanel.SetActive (true);
-            ScoreTxt.text = score + "/" +  totalQuestions;
+            ScoreTxt.text = points + "/" +  totalQuestions;
+            displayProficiency();
+            ihandler.AddNameToList();
 
 //retry
-            if(score == 7){
+            if(points == 7){
                 buttonRetry.SetActive(false);
                 Message.text = "Mahusay! Nahuli mo ang Ibong Adarna.";
                 Button Nbtn = NextBtn.GetComponent<Button>();
@@ -93,6 +98,30 @@ public class QuizManager3 : MonoBehaviour
         SceneManager.LoadScene("level_PiedasPlatas");
     }
 
+    public void displayProficiency(){
+        if(points == 1){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(points == 2){
+            proficient = "Beginner";
+            Debug.Log("Beginner");
+        }
+        if(points == 3){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(points == 4){
+            proficient = "Intemediate";
+            Debug.Log("Intermediate");
+        }
+        if(points == 5){
+           proficient = "Advance";
+           Debug.Log("Advance");
+        }
+
+    }
+
    
     
     
@@ -106,10 +135,11 @@ public class QuizManager3 : MonoBehaviour
 
             FlashPanel.SetActive(true);
             FlashText.text = "Tama ka!";
-            score += 1;
+            points += 1;
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
     }
 
     public void wrong()
@@ -119,6 +149,7 @@ public class QuizManager3 : MonoBehaviour
             Answer = true;
             QnA.RemoveAt(currentQuestion);
             generateQuestion();
+            displayProficiency();
     }
 
 //Answers
