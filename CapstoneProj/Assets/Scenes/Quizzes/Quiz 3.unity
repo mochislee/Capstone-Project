@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO QUIZ
+  m_text: START QUIZ NO. 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b5854e98f2972f4e8b091566b4138dd, type: 2}
   m_sharedMaterial: {fileID: -3065526508532192173, guid: 2b5854e98f2972f4e8b091566b4138dd, type: 2}
@@ -2513,8 +2513,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 44d64bd5a1c99274984661d85f67482d, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2944,7 +2944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxCount: 5
-  filename: Quiz3,json
+  filename: Quiz3.json
 --- !u!114 &1027440182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,8 +3029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 50}
-  m_SizeDelta: {x: 270.8, y: 87.6}
+  m_AnchoredPosition: {x: 21, y: 3}
+  m_SizeDelta: {x: 451.1813, y: 87.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032706848
 MonoBehaviour:
@@ -3764,8 +3764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.1552305, y: 165.89902}
-  m_SizeDelta: {x: 448.3356, y: 100}
+  m_AnchoredPosition: {x: 11, y: 166}
+  m_SizeDelta: {x: 616.953, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270134318
 MonoBehaviour:
