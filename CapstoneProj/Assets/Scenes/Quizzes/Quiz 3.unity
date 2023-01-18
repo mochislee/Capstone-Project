@@ -2904,10 +2904,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027440184}
+  - component: {fileID: 1027440185}
   - component: {fileID: 1027440182}
   - component: {fileID: 1027440181}
   - component: {fileID: 1027440180}
-  - component: {fileID: 1027440185}
   m_Layer: 0
   m_Name: Proficiency Manager
   m_TagString: Untagged
@@ -2930,7 +2930,7 @@ MonoBehaviour:
   panel: {fileID: 1481231232}
   panel1: {fileID: 845476711}
   highscoreUIElementPrefab: {fileID: 8136021249461876207, guid: f4b0cbe1eb99d7e489c438887afa3a3e, type: 3}
-  elementWrapper: {fileID: 0}
+  elementWrapper: {fileID: 1756431563}
 --- !u!114 &1027440181
 MonoBehaviour:
   m_ObjectHideFlags: 0

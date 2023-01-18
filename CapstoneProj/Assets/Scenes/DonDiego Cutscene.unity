@@ -4332,7 +4332,7 @@ MonoBehaviour:
   trigger_target: {fileID: 0}
   trigger_actor: {fileID: 11400000, guid: 6929769859ce23e47afcb0e7ff40bffd, type: 2}
   trigger_value: 0
-  trigger_limit: 1
+  trigger_limit: 0
   dialogue_type: 0
   pause_gameplay: 1
   skipable: 1
